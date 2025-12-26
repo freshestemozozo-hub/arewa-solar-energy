@@ -11,9 +11,14 @@ body {
 }
 header {
     text-align: center;
-    background-color: rgb(53, 18, 11);
-    padding: 25px;
-    border-radius: 8px;
+    padding: 80px 20px;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #240606 #410808);
+    color: rgb(7, 1, 1)
+}
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 h1 {
     color: #02fa61;
@@ -51,8 +56,8 @@ section {
     margin:auto
 }
 header p {
-    font-size: 16px;
-    margin-top: 10px;
+    font-size: 3rem;
+    margin-top: 20px;
 
 }
 .container {
@@ -122,16 +127,16 @@ nav a:hover {
 }
 .card {
     background-color: rgb(53, 11, 11);
-    border-radius: 8px;
-    padding: 15px;
+    border-radius: 10px;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rbga(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rbga(0, 0, 0, 0.1);
     transition: transform 0.3 ease, box-shaddow 0.3s ease;
     animation: fadeup 0.8 ease forwards;
 }
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 .card img {
     width: 100%;
@@ -229,6 +234,18 @@ button, .hero-button {
     border-radius: 6px;
     transition: all 0.3 ease;
 }
+button, .btn {
+    background-color: #240606;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3 ease;
+}
+button:hover, .btn:hover {
+    background-color: #410808;
+}
 @keyframes fadeup {
     from{
         opacity: 0;
@@ -247,10 +264,16 @@ footer {
     background-color: #240606;
     color: white;
     text-align: center;
-    padding: 20px 10px;
-    margin-top: 40px;
-    font-size: 14px;
-    opacity: 0.95;
+    padding: 25px 20px;
+    font-size: 0.9rem;
+}
+footer a {
+    color: #05ee10;
+    text-decoration: none;
+    margin: 0 10px;
+}
+footer a:hover {
+    color: #f32727;
 }
 footer .footer-content img {
     width: 80px;
@@ -273,7 +296,7 @@ p, li {
     font-size: 16px;
 }
 html {
-    scroll-snap-type: smooth;
+    scroll-behavior: smooth;
 }
 img {
     max-width: 100%;

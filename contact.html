@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <tittle>Contact us | Arewa Solar Energy</tittle>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+     <header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <h1>Arewa Solar Energy</h1>
+    <p>Reliable and affordable solar solutions</p>
+    </header>
+    <section>
+    <h2>Contact Us</h2>
+    <form class="contact-form" onsubmit="sendWhatsApp(); return false;">
+
+        <label>
+            Full name
+            <input type="text" id="name" required>
+        </label>
+         <label>
+            Phone Number
+            <input type="tel" id="phone" required>
+        </label>
+         <label>
+            Message
+            <textarea id="message" required></textarea>
+        </label>
+        <button type="submit">Send Message</button>
+    </form>
+    </section>
+     <script>
+    function sendWhatsApp() {
+        var name = document.getElementById("name").value;
+        var phone = document.getElementById("phone").value;
+        var message = document.getElementById("message").value;
+        
+        var whatsappNumber = "2348146411921";
+
+        var text =
+        "Hello Arewa Solar Energy,%0A%0A" +
+            "Name: " + name + "\n" +
+            "Phone: " + phone + "\n" +
+            "Message: " + message;
+
+        var encodedText = encodeURIComponent(text);
+
+        var whatsappURL =
+            "https://wa.me/" + whatsappNumber + "?text=" + encodedText;
+
+        window.open(whatsappURL, "_blank");
+    }
+    </script>
+</body>
+</html>
